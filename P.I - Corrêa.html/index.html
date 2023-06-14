@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Baby World - Loja de Roupas para Crianças</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div id="logo">
+                    <img src="img/child-regular-24.png" alt="Logo">
+                    <h1>Baby World</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="carrinho">
+            <a href="carrinho.html">
+                <img id="cart-image" src="img/cart-regular-24.png" alt="Carrinho">
+            </a>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container">
+            <div id="carousel">
+                <div class="slide">
+                    <a href="link-da-imagem-slide1" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_0.jpg" alt="Slide 1">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Novas coleções chegaram!</h2>
+                        <p>Confira as últimas tendências em roupas para crianças.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide2" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_1.jpg" alt="Slide 2">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Descontos especiais</h2>
+                        <p>Aproveite nossas promoções e economize nas compras.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide3" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_2.jpg" alt="Slide 3">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Frete grátis</h2>
+                        <p>Compre acima de R$ 100 e ganhe o frete grátis.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide4" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_3.jpg" alt="Slide 4">
+                    </a>
+                    <div class="slide-caption">
+                        <h2> :)</h2>
+                        <p>Obrigado pela preferência.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destaques">
+        <div class="container">
+            <h2>Destaques</h2>
+            <div class="carousel">
+                <div class="product">
+                    <img src="img/Body FBI-PhotoRoom.png.png" alt="Produto 1">
+                    <h3>Baby Operacional</h3>
+                    <p>R$ 49,90</p>
+                    <i class='bx bxs-skull'></i>
+                    <a href="produto.html" class="btn">Detalhes</a>
+                    <button onclick="adicionarAoCarrinho('Para seu Baby Operacional', 49.9)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="img/Body_Rafael.png.png" alt="Produto 2">
+                    <h3>Baby do Rodrigo</h3>
+                    <p>R$ 59,90</p>
+                    <i class='bx bxl-java' ></i>
+                    <a href="produto.html" class="btn">Detalhes</a>
+                    <button onclick="adicionarAoCarrinho('Baby do Rodrigo', 19.9)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="img/Body AD DC.png.png" alt="Produto 3">
+                    <h3>Body AC>DC</h3>
+                    <p>R$ 39,90</p>
+                    <i class='bx bxl-deezer' ></i>
+                    <a href="produto.html" class="btn">Detalhes</a>
+                    <button onclick="adicionarAoCarrinho('Body AC>DC', 39.9)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="img/Body pecuara.png" alt="Produto 3">
+                    <h3>Baby da Pecuária</h3>
+                    <p>R$ 39,90</p>
+                    <i class='bx bxs-beer'></i>
+                    <a href="produto.html" class="btn">Detalhes</a>
+                    <button onclick="adicionarAoCarrinho('Body Pecuária', 39.9)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div id="footer-logo">
+                <h2>Baby World</h2>
+            </div>
+            <div id="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                </ul>
+            </div>
+            <div id="copy">
+                <p>&copy; 2023 Baby World. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

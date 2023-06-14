@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Baby World - Produtos</title>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div id="logo">
+                    <h1>Baby World</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="carrinho">
+            <a href="carrinho.html">
+                <img id="cart-image" src="img/cart-regular-24.png" alt="Carrinho">
+            </a>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container">
+            <div id="carousel">
+                <div class="slide">
+                    <a href="link-da-imagem-slide1" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_0.jpg" alt="Slide 1">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Novas coleções chegaram!</h2>
+                        <p>Confira as últimas tendências em roupas para crianças.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide2" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_1.jpg" alt="Slide 2">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Descontos especiais</h2>
+                        <p>Aproveite nossas promoções e economize nas compras.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide3" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_2.jpg" alt="Slide 3">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Frete grátis</h2>
+                        <p>Compre acima de R$ 100 e ganhe o frete grátis.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide4" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_3.jpg" alt="Slide 4">
+                    </a>
+                    <div class="slide-caption">
+                        <h2> :)</h2>
+                        <p>Obrigado pela preferência.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <div class="container">
+            <div class="produto">
+                <img src="img/Body family.png" alt="Produto 1">
+                <h3>Body Family</h3>
+                <p>R$ 49,90</p>
+                <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho('Body Family', 49.9)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="img/Body pecuara.png" alt="Produto 2">
+                <h3>Body Pecuária</h3>
+                <p>R$ 39,90</p>
+                <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho('Body Pecuária', 39.9)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="img/Body FBI-PhotoRoom.png.png" alt="Produto 3">
+                <h3>Baby Operacional</h3>
+                <p>R$ 44,90</p>
+                <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho('Body FBI', 44.9)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="img/Body Modõa.png" alt="Produto 4">
+                <h3>Body Modão</h3>
+                <p>R$ 19,90</p>
+                <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho('Body Modão', 19.9)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="img/Body_Rafael.png.png" alt="Produto 5">
+                <h3>Baby do Rodrigo</h3>
+                <p>R$ 19,90</p>
+                <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho('Baby do Rodrigo', 19.9)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="img/Roupinha 1.png" alt="Produto 6">
+                <h3>Moletom</h3>
+                <p>R$ 44,90</p>
+                <button class="adicionar-carrinho-btn" onclick="adicionarAoCarrinho('Conjuntinho', 44.9)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Baby World - Carrinho de Compras</title>
+    <script src="script.js"></script>
+    <style>
+        #carrinho {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #cart-items {
+            margin-top: 20px;
+        }
+        
+        #empty-cart-message {
+            font-style: italic;
+            color: #888;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        
+        .cart-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        
+        .cart-item h3,
+        .cart-item p {
+            margin: 0;
+        }
+        
+        .cart-item p {
+            font-weight: bold;
+        }
+        
+        #clear-cart-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff5555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-item .quantity {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item .quantity input {
+            width: 30px;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .cart-item .quantity button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 2px 5px;
+        }
+
+        #total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #checkout-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #55aaff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div id="logo">
+                    <h1>Baby World</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Fale Conosco</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="carrinho">
+            <a href="carrinho.html">
+                <img id="cart-image" src="img/cart-regular-24.png" alt="Carrinho">
+            </a>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container">
+            <div id="carousel">
+                <div class="slide">
+                    <a href="link-da-imagem-slide1" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_0.jpg" alt="Slide 1">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Novas coleções chegaram!</h2>
+                        <p>Confira as últimas tendências em roupas para crianças.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide2" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_1.jpg" alt="Slide 2">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Descontos especiais</h2>
+                        <p>Aproveite nossas promoções e economize nas compras.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide3" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_2.jpg" alt="Slide 3">
+                    </a>
+                    <div class="slide-caption">
+                        <h2>Frete grátis</h2>
+                        <p>Compre acima de R$ 100 e ganhe o frete grátis.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="link-da-imagem-slide4" target="_blank">
+                        <img src="img/DreamShaper_v5_image_of_a_baby_boy_clothing_store_with_showcas_3.jpg" alt="Slide 4">
+                    </a>
+                    <div class="slide-caption">
+                        <h2> :)</h2>
+                        <p>Obrigado pela preferência.</p>
+                        <a href="produtos.html" class="btn">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrinho">
+        <div class="container">
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-items">
+                <div class="cart-item" id="cart-item-1">
+                    <img src="img/Body family.png" alt="Produto 1">
+                    <div>
+                        <h3>Body Family</h3>
+                        <p>R$ 49,90</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="diminuirQuantidade(1)">-</button>
+                        <input type="text" id="quantity-1" value="1" readonly>
+                        <button onclick="aumentarQuantidade(1)">+</button>
+                    </div>
+                    <button onclick="removerDoCarrinho(1)">Remover</button>
+                </div>
+                <div class="cart-item" id="cart-item-2">
+                    <img src="img/Body pecuara.png" alt="Produto 2">
+                    <div>
+                        <h3>Body Pecuária</h3>
+                        <p>R$ 39,90</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="diminuirQuantidade(2)">-</button>
+                        <input type="text" id="quantity-2" value="1" readonly>
+                        <button onclick="aumentarQuantidade(2)">+</button>
+                    </div>
+                    <button onclick="removerDoCarrinho(2)">Remover</button>
+                </div>
+                <div class="cart-item" id="cart-item-3">
+                    <img src="img/Body FBI-PhotoRoom.png.png" alt="Produto 3">
+                    <div>
+                        <h3>Baby Operacional</h3>
+                        <p>R$ 44,90</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="diminuirQuantidade(3)">-</button>
+                        <input type="text" id="quantity-3" value="1" readonly>
+                        <button onclick="aumentarQuantidade(3)">+</button>
+                    </div>
+                    <button onclick="removerDoCarrinho(3)">Remover</button>
+                </div>
+                <div class="cart-item" id="cart-item-4">
+                    <img src="img/Body Modõa.png" alt="Produto 4">
+                    <div>
+                        <h3>Body Modão</h3>
+                        <p>R$ 19,90</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="diminuirQuantidade(4)">-</button>
+                        <input type="text" id="quantity-4" value="1" readonly>
+                        <button onclick="aumentarQuantidade(4)">+</button>
+                    </div>
+                    <button onclick="removerDoCarrinho(4)">Remover</button>
+                </div>
+                <div class="cart-item" id="cart-item-5">
+                    <img src="img/Body_Rafael.png.png" alt="Produto 5">
+                    <div>
+                        <h3>Baby do Rodrigo</h3>
+                        <p>R$ 19,90</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="diminuirQuantidade(5)">-</button>
+                        <input type="text" id="quantity-5" value="1" readonly>
+                        <button onclick="aumentarQuantidade(5)">+</button>
+                    </div>
+                    <button onclick="removerDoCarrinho(5)">Remover</button>
+                </div>
+                <div class="cart-item" id="cart-item-6">
+                    <img src="img/Roupinha 1.png" alt="Produto 6">
+                    <div>
+                        <h3>Moletom</h3>
+                        <p>R$ 44,90</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="diminuirQuantidade(6)">-</button>
+                        <input type="text" id="quantity-6" value="1" readonly>
+                        <button onclick="aumentarQuantidade(6)">+</button>
+                    </div>
+                    <button onclick="removerDoCarrinho(6)">Remover</button>
+                </div>
+                <div id="empty-cart-message">Seu carrinho está vazio.</div>
+            </div>
+            <button id="clear-cart-button" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div> <div id="total">Valor Total: R$ <span id="total-value">0.00</span></div>
+        <button id="checkout-button" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+    </section>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
