@@ -13,7 +13,6 @@ function adicionarAoCarrinho(nome, preco) {
         cart = [];
     }
 
-    // Add the selected item to the cart
     if (nome === "Body Family") {
         cart.push(item1);
     } else if (nome === "Body Pecuária") {
@@ -39,15 +38,14 @@ function limparCarrinho() {
     alert("O carrinho foi limpo.");
 }
 
-  function getPrecoProduto(id) {
-    return precos[id];
-  }
-  
-
-// Variáveis globais
+// Qunatidade inicial de cada produto
 var quantidades = {
-    1: 1, // Quantidade inicial do Produto 1 (Body Family)
-    // Adicione as demais quantidades iniciais dos produtos aqui
+    1: 1, 
+    2: 1, 
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
 };
 
 // Função para aumentar a quantidade de um produto no carrinho
@@ -93,17 +91,39 @@ function atualizarValorTotal() {
 
 // Função para obter o preço de um produto com base no ID
 function getPrecoProduto(id) {
-}
-var precos = {
-    1: 49.90, // Preço do Produto 1 (Body Family)
-    2: 39.90, // Preço do Produto 2 (Body Pecuária)
-    3: 44.90, // Preço do Produto 3 (Baby Operacional)
-    4: 19.90, // Preço do Produto 4 (Body Modão)
-    5: 19.90, // Preço do Produto 5 (Baby do Rodrigo)
-    6: 44.90  // Preço do Produto 6 (Moletom)
-  };
-  
-  function getPrecoProduto(id) {
     return precos[id];
-  }   
+}
+
+var precos = {
+    1: 49.90, // Preço do Produto 1 
+    2: 39.90, // Preço do Produto 2 
+    3: 44.90, // Preço do Produto 3 
+    4: 19.90, // Preço do Produto 4
+    5: 19.90, // Preço do Produto 5 
+    6: 44.90  // Preço do Produto 6 
+};
+
+// ...
+
+// Função para finalizar a compra
+function finalizarCompra() {
+    // Calcular o valor total da compra
+    var total = calcularTotal();
+
+    // Exibir o modal com o valor total
+    $('#modal').text('Valor total da compra: R$' + total.toFixed(2));
+    $('#modal').show();
+
+    // Limpar o carrinho
+    limparCarrinho();
+}
+
+// ...
+
+// Evento de clique no botão "Finalizar Compra"
+$('#checkout-button').click(function() {
+    finalizarCompra();
+});
+
+
 

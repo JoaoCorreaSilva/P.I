@@ -69,7 +69,7 @@ nav ul li a {
 #carousel {
     display: flex;
     width: 300%;
-    animation: slide 100s infinite;
+    animation: slide 3s infinite;
 }
 
 .slide {
